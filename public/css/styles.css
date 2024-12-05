@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000000;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsl(220, 12%, 5%);
+}
+
+.card {
+  max-width: 380px;
+  padding: 25px;
+  border-radius: 30px;
+  background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+}
+.card h1 {
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+  margin: 20px 0 10px;
+}
+.card p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: hsl(217, 12%, 63%);
+}
+.card img {
+  padding: 12px;
+  border-radius: 50%;
+  background: hsl(213, 19%, 18%);
+  box-shadow: 0 0px 1px 0px hsl(216, 12%, 8%);
+}
+.card .rating-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.card .rating-list__item {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: hsl(213, 19%, 18%);
+  box-shadow: 0 0px 1px 0px hsl(216, 12%, 8%);
+  color: hsl(217, 12%, 63%);
+}
+.card form .btn-submit {
+  font-family: "Overpass", sans-serif;
+  display: block;
+  text-align: center;
+  width: 100%;
+  border-radius: 30px;
+  padding: 12px 0;
+  border: none;
+  background: hsl(25, 97%, 53%);
+  color: hsl(216, 12%, 8%);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  box-shadow: 0 0px 3px 0px hsl(216, 12%, 8%);
+}
+
+/*# sourceMappingURL=styles.css.map */
