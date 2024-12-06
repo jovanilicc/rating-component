@@ -10,28 +10,50 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
-
+    <script src="/js/rating.js" defer></script>
     <title>Rating Component</title>
   </head>
   <body>
-    <div class="card">
-      <img src="/images/icon-star.svg" alt="" />
-      <h1>How did we do?</h1>
-      <p>
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <ul class="rating-list">
-        <li class="rating-list__item">1</li>
-        <li class="rating-list__item">2</li>
-        <li class="rating-list__item">3</li>
-        <li class="rating-list__item">4</li>
-        <li class="rating-list__item">5</li>
-      </ul>
-      <form action="#" method="get">
-        <input type="hidden" name="rate" />
-        <button class="btn-submit" type="submit">SUBMIT</button>
-      </form>
+    <div class="card-container">
+      <div class="card" id="rating-box">
+        <div>
+          <img class="star-img" src="/images/icon-star.svg" alt="" />
+        </div>
+        <h1>How did we do?</h1>
+        <p class="card__content">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <ul class="rating-list">
+          <li class="rating-list__item" data-rate="1">1</li>
+          <li class="rating-list__item" data-rate="2">2</li>
+          <li class="rating-list__item" data-rate="3">3</li>
+          <li class="rating-list__item" data-rate="4">4</li>
+          <li class="rating-list__item" data-rate="5">5</li>
+        </ul>
+        <form action="" method="get" id="rate-form">
+          <input type="hidden" id="rate" name="rate" value="0" />
+          <button class="btn-submit" type="submit">SUBMIT</button>
+        </form>
+      </div>
+      <div class="card" id="thankyou-box" style="display: none">
+        <img
+          class="thankyou-img"
+          src="/images/illustration-thank-you.svg"
+          alt="Thank you for submitting your rating"
+        />
+        <div class="card-select">
+          <h4 class="card-select__text">
+            You selected <span class="rate-text">0</span> out of 5
+          </h4>
+        </div>
+        <h2>Thank you!</h2>
+
+        <p class="card__content card__content--center">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch.
+        </p>
+      </div>
     </div>
   </body>
 </html>

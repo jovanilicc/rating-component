@@ -42,23 +42,34 @@ body {
   background: hsl(220, 12%, 5%);
 }
 
+.card-container {
+  display: flex;
+}
+
 .card {
-  max-width: 380px;
-  padding: 25px;
+  max-width: 400px;
+  padding: 30px 30px;
   border-radius: 30px;
   background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
 }
 .card h1 {
   font-size: 24px;
   color: hsl(0, 0%, 100%);
   margin: 20px 0 10px;
 }
-.card p {
+.card__content {
   font-size: 15px;
   line-height: 1.5;
   color: hsl(217, 12%, 63%);
 }
-.card img {
+.card__content--center {
+  text-align: center;
+}
+.card .star-img {
   padding: 12px;
   border-radius: 50%;
   background: hsl(213, 19%, 18%);
@@ -74,17 +85,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   width: 50px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background: hsl(213, 19%, 18%);
   box-shadow: 0 0px 1px 0px hsl(216, 12%, 8%);
   color: hsl(217, 12%, 63%);
+  transition: all 0.2s ease;
+}
+.card .rating-list__item:hover {
+  background: hsl(25, 97%, 53%);
+  color: hsl(213, 19%, 18%);
+}
+.card .rating-list__item--active {
+  background: hsl(0, 0%, 100%);
+}
+.card .rating-list__item--active:hover {
+  background: hsl(0, 0%, 100%);
 }
 .card form .btn-submit {
   font-family: "Overpass", sans-serif;
   display: block;
   text-align: center;
+  line-height: 1;
   width: 100%;
   border-radius: 30px;
   padding: 12px 0;
@@ -95,6 +119,35 @@ body {
   letter-spacing: 1px;
   font-weight: 700;
   box-shadow: 0 0px 3px 0px hsl(216, 12%, 8%);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.card form .btn-submit:hover {
+  background: hsl(0, 0%, 100%);
+}
+.card .thankyou-img {
+  display: block;
+  margin: 0 auto;
+}
+.card h2 {
+  font-size: 24px;
+  color: hsl(0, 0%, 100%);
+  margin: 10px 0;
+  text-align: center;
+}
+.card .card-select {
+  text-align: center;
+}
+.card .card-select__text {
+  background: hsl(213, 19%, 18%);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: hsl(25, 97%, 53%);
+  display: inline-block;
+  margin: 30px auto 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

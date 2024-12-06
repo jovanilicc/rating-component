@@ -17,23 +17,33 @@ body {
   min-height: 100vh;
   background: hsl(220, 12%, 5%);
 }
+.card-container {
+  display: flex;
+}
+
 .card {
-  max-width: 380px;
-  padding: 25px;
+  max-width: 400px;
+  padding: 30px 30px;
   border-radius: 30px;
   background: linear-gradient($dark-blue, $deep-blue);
-
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
   h1 {
     font-size: 24px;
     color: $white;
     margin: 20px 0 10px;
   }
-  p {
+  &__content {
     font-size: 15px;
     line-height: 1.5;
     color: $light-grey;
+    &--center {
+      text-align: center;
+    }
   }
-  img {
+  .star-img {
     padding: 12px;
     border-radius: 50%;
     background: $dark-blue;
@@ -42,21 +52,30 @@ body {
   .rating-list {
     display: flex;
     justify-content: space-between;
-
     padding: 30px 0;
     &__item {
       font-size: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
-
+      cursor: pointer;
       width: 50px;
       aspect-ratio: 1 / 1;
       border-radius: 50%;
-
       background: $dark-blue;
       box-shadow: 0 0px 1px 0px $deep-blue;
       color: $light-grey;
+      transition: all 0.2s ease;
+      &:hover {
+        background: $orange;
+        color: $dark-blue;
+      }
+      &--active {
+        background: $white;
+        &:hover {
+          background: $white;
+        }
+      }
     }
   }
   form {
@@ -64,7 +83,7 @@ body {
       font-family: $font-primary;
       display: block;
       text-align: center;
-
+      line-height: 1;
       width: 100%;
       border-radius: 30px;
       padding: 12px 0;
@@ -75,6 +94,37 @@ body {
       letter-spacing: 1px;
       font-weight: 700;
       box-shadow: 0 0px 3px 0px $deep-blue;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      &:hover {
+        background: $white;
+      }
+    }
+  }
+  .thankyou-img {
+    display: block;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 24px;
+    color: $white;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .card-select {
+    text-align: center;
+
+    &__text {
+      background: $dark-blue;
+      padding: 8px 20px;
+
+      border-radius: 20px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1;
+      color: $orange;
+      display: inline-block;
+      margin: 30px auto 20px;
     }
   }
 }
