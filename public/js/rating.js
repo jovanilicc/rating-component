@@ -18,7 +18,6 @@ const selectRate = (e) => {
   }
 
   currentListElement.classList.add("rating-list__item--active");
-  console.log(rateValue);
   selectedListElement = currentListElement;
 };
 
@@ -32,10 +31,8 @@ const updateRate = (e) => {
     rate.setAttribute("value", rateValue);
     ratingBox.style.display = "none";
     thankyouBox.style.display = "block";
+    thankyouBox.animate([{ opacity: 0 }, { opacity: 1 }], 200);
     rateText[0].textContent = rateValue;
-    setTimeout(() => {
-      form.submit();
-    }, 4000);
   } else {
     window.alert("Please select your rating.");
   }

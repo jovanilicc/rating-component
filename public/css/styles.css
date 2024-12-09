@@ -40,6 +40,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: hsl(220, 12%, 5%);
+  padding: 0 24px;
 }
 
 .card-container {
@@ -55,6 +56,11 @@ body {
   justify-content: center;
   flex: 1;
   flex-direction: column;
+}
+@media only screen and (max-width: 768px) {
+  .card {
+    max-width: 370px;
+  }
 }
 .card h1 {
   font-size: 24px;
@@ -94,12 +100,18 @@ body {
   color: hsl(217, 12%, 63%);
   transition: all 0.2s ease;
 }
+@media only screen and (max-width: 768px) {
+  .card .rating-list__item {
+    width: 45px;
+  }
+}
 .card .rating-list__item:hover {
   background: hsl(25, 97%, 53%);
   color: hsl(213, 19%, 18%);
 }
 .card .rating-list__item--active {
   background: hsl(0, 0%, 100%);
+  color: hsl(213, 19%, 18%);
 }
 .card .rating-list__item--active:hover {
   background: hsl(0, 0%, 100%);
@@ -124,6 +136,11 @@ body {
 }
 .card form .btn-submit:hover {
   background: hsl(0, 0%, 100%);
+}
+@media only screen and (max-width: 768px) {
+  .card form .btn-submit {
+    padding: 16px 0;
+  }
 }
 .card .thankyou-img {
   display: block;
